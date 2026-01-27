@@ -1,25 +1,35 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-function Navigation() {
+function Navigation({ onNavClick }) {
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    if (onNavClick) onNavClick();
+  };
+
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a className="nav-link" href="#home">
+        <a className="nav-link" href="#home" onClick={(e) => handleClick(e, "#home")}>
           Home
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#about">
+        <a className="nav-link" href="#about" onClick={(e) => handleClick(e, "#about")}>
           About
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#work">
-          Work
+        <a className="nav-link" href="#projects" onClick={(e) => handleClick(e, "#projects")}>
+          Projects
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#contact">
+        <a className="nav-link" href="#contact" onClick={(e) => handleClick(e, "#contact")}>
           Contact
         </a>
       </li>
@@ -36,7 +46,7 @@ const Navbar = () => {
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Ali
+            Chris
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -62,7 +72,7 @@ const Navbar = () => {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onNavClick={() => setIsOpen(false)} />
           </nav>
         </motion.div>
       )}

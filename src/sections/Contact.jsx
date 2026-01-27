@@ -15,6 +15,8 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  //service_pdg0n9c
+  //template_d5fl9pb
   const showAlertMessage = (type, message) => {
     setAlertType(type);
     setAlertMessage(message);
@@ -30,16 +32,16 @@ const Contact = () => {
     try {
       console.log("From submitted:", formData);
       await emailjs.send(
-        "service_79b0nyj",
-        "template_17us8im",
+        "service_pdg0n9c",
+        "template_d5fl9pb",
         {
           from_name: formData.name,
-          to_name: "Ali",
+          to_name: "Christian",
           from_email: formData.email,
-          to_email: "AliSanatiDev@gmail.com",
+          to_email: "bernilchristian6v@gmail.com",
           message: formData.message,
         },
-        "pn-Bw_mS1_QQdofuV"
+        "fAB-sAqsoaDqy1EnK"
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -47,11 +49,11 @@ const Contact = () => {
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage("danger", "Something went wrong!");
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section id="contact" className="relative flex items-center c-space section-spacing">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
