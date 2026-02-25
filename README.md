@@ -3,7 +3,7 @@
 ## 🚀 Getting Started
 1. Clone the Repository
 ```bash
-git clone https://github.com/Ali-Sanati/Portfolio.git
+git clone https://github.com/Tianbrnl/Portfolio.git
 cd Portfolio
 ```
 2. Install Dependencies
