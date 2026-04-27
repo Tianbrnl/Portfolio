@@ -9,32 +9,39 @@ export function Frameworks() {
     "react",
     "tailwindcss",
     "figma",
-
+    "node",
+    "github",
   ];
 
   // Map skills to their file extensions
   const fileExtensions = {
     canva: "png",
     css3: "svg",
-  
     html5: "svg",
     javascript: "svg",
     react: "svg",
     tailwindcss: "svg",
     figma: "png",
+    node: "png",
+    github: "svg",
   };
 
+  const getLogoSrc = (skill) =>
+    `assets/logos/${skill}.${fileExtensions[skill] || "svg"}`;
+
+  const reversedSkills = [...skills].reverse();
+
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40}>
-        {skills.map((skill, index) => (
-          <Icon key={index} src={`assets/logos/${skill}.${fileExtensions[skill] || "svg"}`} />
+    <div className="relative flex h-[13rem] w-[13rem] items-center justify-center overflow-visible sm:h-[14rem] sm:w-[14rem]">
+      <OrbitingCircles iconSize={35} radius={100}>
+        {skills.map((skill) => (
+          <Icon key={skill} src={getLogoSrc(skill)} />
         ))}
       </OrbitingCircles>
-     
-      <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-        {skills.reverse().map((skill, index) => (
-          <Icon key={index} src={`assets/logos/${skill}.${fileExtensions[skill] || "svg"}`} />
+
+      <OrbitingCircles iconSize={22} radius={54} reverse speed={2} startAngle={20}>
+        {reversedSkills.map((skill) => (
+          <Icon key={skill} src={getLogoSrc(skill)} />
         ))}
       </OrbitingCircles>
     </div>
@@ -42,5 +49,11 @@ export function Frameworks() {
 }
 
 const Icon = ({ src }) => (
-  <img src={src} className="duration-200 rounded-sm hover:scale-110" />
+  <img
+    src={src}
+    alt=""
+    aria-hidden="true"
+    draggable={false}
+    className="h-full w-full rounded-sm object-contain p-1 duration-200"
+  />
 );

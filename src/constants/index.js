@@ -10,7 +10,7 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/ordering.png ",
+    image: "/assets/projects/ordering.png",
     tags: [
       {
         id: 1,
@@ -55,26 +55,62 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "E-library (wireframe)",
+    title: "E-library (front-end) ",
     description:
-      "Conceptualized and designed a comprehensive digital library platform, translating high-fidelity Figma wireframes into a structured environment for managing, searching, and accessing digital publications and academic resources.",
+      "Created a comprehensive digital library platform, translating high-fidelity Figma wireframes into a structured environment for managing, searching, and accessing digital publications and academic resources.",
     subDescription: [
       
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/E-library.png",
+    image: "/assets/projects/E-librarys.png",
     tags: [
       {
         id: 1,
-        name: "Pigma",
-        path: "/assets/logos/figma.png",
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
       }
     ],
   },
- 
-
-    
+  {
+    id: 4,
+    title: "Nissan Analytics System",
+    description:
+      "Developed a comprehensive analytics system for Nissan, utilizing MySQL for data management and Node.js for backend processing, to provide actionable insights and enhance decision-making across various business functions.",
+    subDescription: [
+      
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/Nissan.png",
+    tags: [
+      {
+        id: 1,
+        name: "MySQL",
+        path: "/assets/logos/mysql.png",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/node.png",
+      },
+      {
+        id: 3,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
@@ -126,5 +162,3 @@ export const experiences = [
     ],
   },
 ];
-
-

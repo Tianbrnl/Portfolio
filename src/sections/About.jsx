@@ -20,7 +20,7 @@ const About = () => {
             <p className="headtext">Hi, I'm Christian Bernil</p>
             <p className="subtext">
               Over the last 4 years in college, 
-              I’ve developed my front-end development and UI/UX design skills to build dynamic and responsive web applications.
+              I’ve developed my web development and UI/UX design skills to build dynamic and responsive web applications.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -99,14 +99,15 @@ const About = () => {
         </div>
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
+          <div className="relative z-10 w-[48%] sm:w-[50%]">
+            <p className="headtext">Tech Stack</p>
             <p className="subtext">
               I specialize in modern front-end technologies and wireframing tools,
               enabling me to design and build intuitive, responsive user interfaces.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+          <div className="pointer-events-none absolute inset-y-2 left-1/2 flex w-[58%] items-end 
+          justify-end overflow-hidden sm:w-[56%] md:right-2 md:w-[52%] md:scale-150">
             <Frameworks />
           </div>
         </div>
