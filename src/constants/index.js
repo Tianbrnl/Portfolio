@@ -10,7 +10,11 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/ordering.png",
+        images: [
+      "/assets/projects/ordering.png",
+      "/assets/projects/products.png",
+      "/assets/projects/order-dets.png",
+    ],
     tags: [
       {
         id: 1,
@@ -63,7 +67,11 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/E-librarys.png",
+        images: [
+      "/assets/projects/E-librarys.png",
+      
+      "/assets/projects/books.png",
+    ],
     tags: [
       {
         id: 1,
@@ -87,7 +95,11 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/Nissan.png",
+        images: [
+      "/assets/projects/Nissan.png",
+      "/assets/projects/vehicle-sales.png",
+      "/assets/projects/team.png",
+    ],
     tags: [
       {
         id: 1,

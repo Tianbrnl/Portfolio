@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
 
 const Project = ({
@@ -7,15 +7,19 @@ const Project = ({
   subDescription,
   href,
   image,
+  images,
   tags,
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+  const previewImage = Array.isArray(image) ? image[0] : image;
+  const galleryImages = images || (Array.isArray(image) ? image : undefined);
+
   return (
     <>
       <div
         className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
+        onMouseEnter={() => setPreview(previewImage)}
         onMouseLeave={() => setPreview(null)}
       >
         <div>
@@ -40,7 +44,8 @@ const Project = ({
           title={title}
           description={description}
           subDescription={subDescription}
-          image={image}
+          image={previewImage}
+          images={galleryImages}
           tags={tags}
           href={href}
           closeModal={() => setIsHidden(false)}
