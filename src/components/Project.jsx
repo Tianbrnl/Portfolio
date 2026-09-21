@@ -12,8 +12,17 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
-  const previewImage = Array.isArray(image) ? image[0] : image;
-  const galleryImages = images || (Array.isArray(image) ? image : undefined);
+  const previewImage =
+    (Array.isArray(images) && images.length > 0 ? images[0] : null) ||
+    (Array.isArray(image) && image.length > 0 ? image[0] : null) ||
+    image ||
+    images ||
+    null;
+  const galleryImages =
+    (Array.isArray(images) && images.length > 0 ? images : null) ||
+    (Array.isArray(image) && image.length > 0 ? image : null) ||
+    (images ? [images] : null) ||
+    (image ? [image] : []);
 
   return (
     <>
