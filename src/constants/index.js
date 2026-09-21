@@ -1,16 +1,57 @@
 export const myProjects = [
   {
+    id: 0,
+    title: "FitForge",
+    description:
+      "FitForge is a modern AI-powered fitness web application designed to help users manage workouts, nutrition, fitness goals, and progress in one place.",
+    subDescription: [
+      " The application combines a React frontend with Supabase for authentication and user data, Sanity for workout/exercise content management, and Gemini AI for fitness-focused assistance."
+
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/fitforge-h.png",
+    images: [
+      "/assets/projects/fitforge-h.png",
+      "/assets/projects/fitforge-d.png",
+      "/assets/projects/fitforge-n.png",
+    ],
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "SupaBase",
+        path: "/assets/logos/supabase.png",
+      },
+      {
+        id: 3,
+        name: "sanity",
+        path: "/assets/logos/sanity.png",
+      },
+      {
+        id: 4,
+        name: "Gemini",
+        path: "/assets/logos/gemini.png",
+      },
+    ],
+  },
+  {
     id: 1,
     title: "Online ordering with inventory monitoring",
     description:
       "Developed a specialized e-commerce and inventory management platform for GAMJ General Merchandise, designed to streamline the digital procurement and distribution of essential medical products and supplies.",
     subDescription: [
-      " A high-performance full-stack application leveraging React and Tailwind CSS for a responsive frontend, powered by a Node.js" 
-      
+      " A high-performance full-stack application leveraging React and Tailwind CSS for a responsive frontend, powered by a Node.js"
+
     ],
     href: "",
     logo: "",
-        images: [
+    image: "/assets/projects/ordering.png",
+    images: [
       "/assets/projects/ordering.png",
       "/assets/projects/products.png",
       "/assets/projects/order-dets.png",
@@ -44,11 +85,14 @@ export const myProjects = [
     description:
       "Designed and developed a specialized online ordering ecosystem for Sgadgets, transforming high-fidelity wireframes into a fully functional digital storefront for consumer electronics and tech accessories.",
     subDescription: [
-      
+
     ],
     href: "",
     logo: "",
     image: "/assets/projects/sgadgets.png",
+    images: [
+      "/assets/projects/sgadgets.png",
+    ],
     tags: [
       {
         id: 1,
@@ -63,13 +107,14 @@ export const myProjects = [
     description:
       "Created a comprehensive digital library platform, translating high-fidelity Figma wireframes into a structured environment for managing, searching, and accessing digital publications and academic resources.",
     subDescription: [
-      
+
     ],
     href: "",
     logo: "",
-        images: [
+    image: "/assets/projects/E-librarys.png",
+    images: [
       "/assets/projects/E-librarys.png",
-      
+
       "/assets/projects/books.png",
     ],
     tags: [
@@ -91,11 +136,12 @@ export const myProjects = [
     description:
       "Developed a comprehensive analytics system for Nissan, utilizing MySQL for data management and Node.js for backend processing, to provide actionable insights and enhance decision-making across various business functions.",
     subDescription: [
-      
+
     ],
     href: "",
     logo: "",
-        images: [
+    image: "/assets/projects/Nissan.png",
+    images: [
       "/assets/projects/Nissan.png",
       "/assets/projects/vehicle-sales.png",
       "/assets/projects/team.png",
@@ -126,7 +172,7 @@ export const myProjects = [
 ];
 
 export const mySocials = [
- 
+
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/christian-bernil-aa8b983a1/",
